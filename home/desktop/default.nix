@@ -73,6 +73,8 @@
     vscode
     # network
     wireshark
+    # remote access
+    remmina
 
     # As user
     # web
