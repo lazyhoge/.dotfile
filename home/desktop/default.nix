@@ -121,6 +121,45 @@
     };
   };
 
+  # vscode
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      bbenoist.nix
+      ms-vscode-remote.remote-ssh
+      mhutchie.git-graph
+      bierner.emojisense
+      streetsidesoftware.code-spell-checker
+    ];
+    userSettings = {
+      editor.minimap.enabled = false; # ミニマップを非表示にする
+      editor.renderControlCharacters = true; #  制御文字を表示する
+      editor.suggestSelection = "first"; #  サジェスト一覧の初期表示項目設定
+      breadcrumbs.enabled = true; #  ファイルのパンくずリストを表示する
+      files.insertFinalNewline = true; #  ファイルの末尾を改行で終わらせる
+      editor.fontLigatures = true; #  合字を有効化
+      editor.fontSize = 17; #  フォントサイズを変更
+      editor.renderLineHighlight = "all"; #  選択行の行番号をハイライトする
+      editor.cursorBlinking = "smooth"; #  カーソルが滑らかに点滅するように
+      editor.cursorSmoothCaretAnimation = true; #  カーソルの点滅をアニメーション表示する
+      editor.cursorStyle = "block"; #  カーソルの外観をブロックに変更
+      files.autoGuessEncoding = true; #  ファイルの自動エンコードを実施
+      window.zoomLevel = 0; #  画面全体の表示サイズはデフォルト
+      editor.bracketPairColorization.enabled = true; # 括弧の対応を色付ける
+    };
+    keybindings = [
+      {
+        key = "ctrl+n";
+        command = "-workbench.action.files.newUntitledFile";
+      }
+      {
+      key = "cmd+n";
+      command = "explorer.newFile";
+      }
+    ];
+  };
+
+  # zsh
   programs.zsh = {
     enable = true;
   };
