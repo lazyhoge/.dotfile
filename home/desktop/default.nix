@@ -105,7 +105,7 @@
   programs.git = {
     enable = true;
     userName = "lazyhoge";
-    userEmail = "reg.github@lazyhoge.foo";
+    userEmail = "contact@lazyhoge.foo";
     extraConfig.pull.rebase = false;
   };
 
