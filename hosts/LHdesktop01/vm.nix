@@ -9,17 +9,20 @@
   users.users.lazyhoge.extraGroups = [ "libvirtd" ];
 
   # Install necessary packages
+ 
   environment.systemPackages = with pkgs; [
     virt-manager
     virt-viewer
-    spice spice-gtk
+    spice
+    spice-gtk
     spice-protocol
-    win-virtio
+    virtio-win
     win-spice
     gnome.adwaita-icon-theme
   ];
 
   # Manage the virtualisation services
+  programs.virt-manager.enable = true;
   virtualisation = {
     libvirtd = {
       enable = true;
