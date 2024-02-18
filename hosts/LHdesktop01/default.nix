@@ -26,6 +26,14 @@
   networking.hostName = "LHnixos01";
   networking.networkmanager.enable = true;
 
+  networking = {
+    bridges = {
+      br0 = {
+        interfaces = ["enp5s0"];
+      }
+    }
+  }
+
   # Time zone
   time.timeZone = "Asia/Tokyo";
 
