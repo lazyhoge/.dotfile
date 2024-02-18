@@ -6,7 +6,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./vm.nix
+      ./libvirt.nix
       ./PCIe_paththrough.nix
     ];
 
@@ -162,10 +162,6 @@
         enable = true;
         setSocketVariable = true;
       };
-    };
-    libvirtd = {
-      enable = true;
-      
     };
   };
 

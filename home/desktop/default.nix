@@ -37,6 +37,7 @@
     lynx # terminal web browzer
 
     bonnie # disk benchmark
+  
 
     # cli network tools
     mtr # pingとtracerouteでnetworkcheck
@@ -66,6 +67,7 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+    hwloc # lstopo
 
     # desktop tools
     rofi
