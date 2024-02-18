@@ -23,6 +23,12 @@
       fsType = "vfat";
     };
 
+  #1TB sata ssd
+  fileSystems."/mnt" =
+    { device = "/dev/disk/by-uuid/04c38f3d-e6db-45fe-aadd-d03928e27e04";
+      fsType = "btrfs";
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

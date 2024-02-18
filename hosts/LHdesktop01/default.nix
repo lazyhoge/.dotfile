@@ -20,6 +20,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+
   # Network
   networking.hostName = "LHnixos01";
   networking.networkmanager.enable = true;
