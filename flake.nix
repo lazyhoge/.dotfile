@@ -4,6 +4,7 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     };
   };
 
@@ -14,6 +15,9 @@
         modules = [
           ./hosts/LHdesktop01
         ];
+        specialArgs = {
+          inherit inputs; #inputs = inputs と等しい
+        }
       };
     };
 

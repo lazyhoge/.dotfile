@@ -8,7 +8,12 @@
       ./hardware-configuration.nix
       ./libvirt.nix
       ./PCIe_paththrough.nix
-    ];
+    ]
+    ++ (with inputs.nixos-hardware.nixosModules; [
+      common-cpu-amd
+      #common-gpu-nvidia
+      common-pc-ssd
+    ]);
 
   # Hardware modules
 #  ++ (with inputs.nixos-hardware.nixosModules; [

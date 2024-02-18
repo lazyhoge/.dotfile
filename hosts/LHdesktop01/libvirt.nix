@@ -1,9 +1,15 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, user, ... }:
 {
+  users.groups = {
+      libvirt.members = [ "root" "lazyhoge" ];
+      kvm.members = [ "root" "lazyhoge" ];
+    };
+
   virtualisation = {
     libvirtd = {
       enable = true;
+      onBoot = "ignore";
+      onShutdown ="shutdown";
       qemu = {
         package = pkgs.qemu_kvm;
         swtpm.enable = true;
@@ -14,11 +20,6 @@
     spiceUSBRedirection.enable = true;
   };
 
-  # Enable dconf (System Management Tool)
-  programs.dconf.enable = true;
-
-  # Add user to libvirtd group
-  users.users.lazyhoge.extraGroups = [ "libvirtd" ];
 
   # Install necessary packages
  
@@ -31,12 +32,11 @@
     virtio-win
     win-spice
     gnome.adwaita-icon-theme
+    dmidecode
   ];
 
   # Manage the virtualisation services
-  programs.virt-manager.enable = true;
   services.spice-vdagentd.enable = true;
 
-  };
 
 }
