@@ -26,7 +26,11 @@
   networking.hostName = "LHnixos01";
 
   networking = {
-    useDHCP = true;
+    interfaces = {
+      enp5s0 = {
+        useDHCP = true;
+      };
+    };
     bridges = {
       br0 = {
         interfaces = ["enp5s0"];
