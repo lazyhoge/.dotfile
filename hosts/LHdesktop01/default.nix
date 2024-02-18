@@ -27,6 +27,7 @@
   networking.networkmanager.enable = true;
 
   networking = {
+    useDHCP
     bridges = {
       br0 = {
         interfaces = ["enp5s0"];
