@@ -15,13 +15,6 @@
       common-pc-ssd
     ]);
 
-  # Hardware modules
-#  ++ (with inputs.nixos-hardware.nixosModules; [
-#    common-cpu-amd
-#    common-gpu-nvidia
-#    common-pc-ssd
-#  ]);
-
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
