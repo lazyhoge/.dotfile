@@ -30,9 +30,9 @@
     bridges = {
       br0 = {
         interfaces = ["enp5s0"];
-      }
-    }
-  }
+      };
+    };
+  };
 
   # Time zone
   time.timeZone = "Asia/Tokyo";
