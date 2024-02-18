@@ -112,6 +112,8 @@
     curl
     zsh
     libvirt
+    btrfs-progs
+    btrfs-snap
     firefox
   ];
 
