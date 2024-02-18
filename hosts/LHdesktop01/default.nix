@@ -24,7 +24,6 @@
 
   # Network
   networking.hostName = "LHnixos01";
-  networking.networkmanager.enable = true;
 
   networking = {
     useDHCP = true;
