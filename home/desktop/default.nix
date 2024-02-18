@@ -36,6 +36,8 @@
     fzf # いい感じに検索
     lynx # terminal web browzer
 
+    bonnie # disk benchmark
+
     # cli network tools
     mtr # pingとtracerouteでnetworkcheck
     iperf3 # speed test

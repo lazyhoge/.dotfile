@@ -26,7 +26,6 @@
   networking.hostName = "LHnixos01";
   networking.networkmanager.enable = true;
   networking = {
-    #useNetworkd = true;
     interfaces = {
       enp5s0 = {
         useDHCP = true;
@@ -129,6 +128,8 @@
     libvirt
     btrfs-progs
     btrfs-snap
+    hdparm
+    sdparm
     firefox
   ];
 
