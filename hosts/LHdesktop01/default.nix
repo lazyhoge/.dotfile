@@ -7,6 +7,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./vm.nix
+      ./PCIe_paththrough.nix
     ];
 
   # Hardware modules
