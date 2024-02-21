@@ -24,8 +24,8 @@
     };
 
   #1TB sata ssd
-  fileSystems."/mnt" =
-    { device = "/dev/disk/by-uuid/04c38f3d-e6db-45fe-aadd-d03928e27e04";
+  fileSystems."/dev" =
+    { device = "/dev/disk/by-uuid/8327ad9b-1e41-4e89-9648-891acfc3539f";
       fsType = "btrfs";
     };
 
